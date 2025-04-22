@@ -1,4 +1,4 @@
-import os
+
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
@@ -52,7 +52,7 @@ def gerar_orcamento(descricao):
     for palavra, preco in orcamentos_keywords.items():
         if palavra.lower() in descricao.lower():
             return preco
-    return 100  # valor padrão caso não encontre palavra-chave
+    return 100
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(debug=True)
