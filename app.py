@@ -6,6 +6,4 @@ app = Flask(__name_)
 @app.route("/")
 def homepage():
  return "Meu Site No ar !"
-
-if __name__ == "__app__":
 app.run()
