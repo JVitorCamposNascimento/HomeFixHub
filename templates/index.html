@@ -1,60 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>HomeFixHub</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header">
+    <!-- MENU SUPERIOR -->
+    <header>
         <div class="logo">
-            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Logo Python" />
-            <span>HomeFixHub</span>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Logo">
+            <h1>HomeFixHub</h1>
         </div>
-        <nav class="nav">
-            <a href="#">Serviços</a>
-            <a href="#">Sou um Profissioal</a>
-            <a href="#">Loja HFH</a>
-            <a href="#">LogIn</a>
+        <nav>
+            <a href="#">Solicitar Serviço</a>
+            <a href="#">Log In</a>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="left">
-            <h1>Find Trusted <br>Home Repair & IT Services</h1>
-            <p>Connect with skilled professionals for electrical, plumbing, IT repair, and more.</p>
-            <button class="btn">Get Started</button>
-        </section>
+    <!-- CONTEÚDO CENTRAL -->
+    <main class="container">
+        <section>
+            <div class="Sobre">
+                <h1>Conheça mais sobre a plataforma HomeFix Hub</h1>
+                <p>HomeFix Hub, é uma platorma do futura feita pra você hoje. <br> Aqui você encontra profissionais especializados em resolver seus problemas domésticos. <br> Não quebre a cabeça, deixe que nós cuidamos e resolvemos tudo para você.
+                </p>
 
-        <section class="right">
-            <div class="chat-box">
-                <p class="chat-title">🔒 Hello! How can I assist you with your home repair or IT needs?</p>
-                <textarea placeholder="Describe your issue..."></textarea>
-                <button class="btn">Send</button>
+            </div>
+            <section class="esquerda">
+                <div class="quadro">
+                    <h2>Procurar Profissionais Qualificados & Soluções rápidas Online.</h2>
+                    <p>Conecte-se com profissionais com habilidades em elétrica, hidráulica, IT, reparos domésticos e muito mais.</p>
+                </div>
+            </section>
+
+        </section>
+        <section class="direita">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>🤖 Assistente Virtual</h2>
+                </div>
+
+                <div class="chat-box">
+                    <div class="message bot">
+                        <p>Olá! Como posso te ajudar hoje?</p>
+                    </div>
+                    <div class="message user">
+                        <p>Estou com um vazamento de água na torneira. O que posso fazer?</p>
+                    </div>
+                    <div class="message bot">
+                        <p>Verifique se o registro está fechado. Caso não resolva, posso indicar um profissional perto de você.</p>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" placeholder="Digite sua mensagem...">
+                    <button>Enviar</button>
+                </div>
             </div>
         </section>
     </main>
 
-    <section class="cards">
+    <!-- CARDS INFERIORES -->
+    <footer class="cards">
         <div class="card">
-            <span>🔧</span>
-            <h3>Browse Services</h3>
-            <p>Explore our range of home repair and IT support services.</p>
+            <div class="card-icon">🔍</div>
+            <h4>Procurar Serviços</h4>
+            <p>Explore nossa gama de serviços para reparos domésticos e suporte técnico.</p>
         </div>
         <div class="card">
-            <span>📋</span>
-            <h3>Get a Diagnosis</h3>
-            <p>Answer questions to receive an instant issue assessment.</p>
+            <div class="card-icon">🧠</div>
+            <h4>Efetue um Diagnóstico</h4>
+            <p>Responda algumas perguntas e receba um diagnóstico instantâneo do seu problema.</p>
         </div>
         <div class="card">
-            <span>💼</span>
-            <h3>Become a Partner</h3>
-            <p>Join our network of trusted service professionals.</p>
+            <div class="card-icon">💼</div>
+            <h4>Seja um Profissional HomeFixHub</h4>
+            <p>Junte-se à nossa rede de profissionais confiáveis e aumente sua renda.</p>
         </div>
-    </section>
+    </footer>
+
 </body>
 
 </html>
