@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Administrador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        
+        th {
+            background: #007bff;
+            color: white;
+        }
+        
+        img {
+            max-width: 100px;
+            border-radius: 4px;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .error {
+            color: red;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+            table,
+            th,
+            td {
+                font-size: 14px;
+            }
+            img {
+                max-width: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Tela de Administrador</h2>
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <p class="error">{{ messages[0] }}</p>
+        {% endif %} {% endwith %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>Email</th>
+                <th>Foto</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+                <td>{{ user[3] }}</td>
+                <td>
+                    {% if user[4] %}
+                    <img src="{{ url_for('static', filename=user[4]) }}" alt="Foto do usuário"> {% else %} Sem foto {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="{{ url_for('dashboard') }}">Voltar ao Dashboard</a> |
+            <a href="{{ url_for('logout') }}">Sair</a>
+        </p>
+    </div>
+</body>
+
+</html>
